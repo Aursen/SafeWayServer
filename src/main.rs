@@ -52,7 +52,7 @@ async fn main() -> std::io::Result<()> {
     let manager = ConnectionManager::<PgConnection>::new(connspec);
     let pool = r2d2::Pool::builder().build(manager).expect("Failed to create pool.");
 
-    let bind = "0.0.0.0:8080";
+    let bind = "0.0.0.0:8100";
 
     println!("Starting server at: {}", &bind);
 
